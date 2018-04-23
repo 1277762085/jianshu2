@@ -5,13 +5,9 @@
 </template>
 
 <script>
-// import Vue from 'vue'
-// import BoostrapVue from 'bootstrap-vue'
-// Vue.use(BoostrapVue)
-// import 'bootstrap/dist/css/bootstrap.css'
-// import 'bootstrap-vue/dist/bootstrap-vue.css'
+
 export default {
-  // 首先引入bootstrap。css的文件
+  
 };
 </script>
 <style>
