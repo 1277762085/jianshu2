@@ -100,7 +100,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="search">
+                        <li class="search" v-show="!a">
                             <form method="post">
                                 <input type="text" placeholder="搜索" class="search-input">
                                 <a href="#" class="search-btn">
@@ -119,60 +119,6 @@
                     </div>
                 </div>
             </div>
-            <!-- <ul class="ul-li" v-show="c">
-                <li class="active">
-                    <nuxt-link to="/" > 
-                    <i class="fa fa-compass"></i>
-                        <span>发现</span>
-                    </nuxt-link>
-                </li>
-                <li>
-                    <nuxt-link to="/">
-                    <i class="fa fa-book"></i>
-                        <span>关注</span>
-                    </nuxt-link>
-                </li>
-                <li class="aaa" @mouseover="b=true,d=false" @mouseleave="b=false,d=true">
-                    <nuxt-link to="/">
-                    <i class="fa fa-bell-o"></i>
-                        <span>消息</span>
-                    </nuxt-link>
-                    <ul class="drop-menu" v-show="b">
-                        <li>
-                            <nuxt-link to="/">
-                                <i class="fa fa-comment-o"></i>
-                                评论
-                            </nuxt-link>
-                        </li>
-                        <li>
-                            <nuxt-link to="/">
-                                <i class="fa fa-envelope-o"></i>
-                                简信
-                            </nuxt-link>
-                        </li>
-                        <li>
-                            <nuxt-link to="/">
-                                <i class="fa fa-square-o"></i>
-                                关注
-                            </nuxt-link>
-                        </li>
-                        <li>
-                            <nuxt-link to="/">
-                                <i class="fa fa-heart-o"></i>
-                                喜欢和赞
-                            </nuxt-link>
-                        </li>
-                    </ul>
-                </li>
-                <li class="search" v-show="d">
-                    <form method="post">
-                        <input type="text" placeholder="搜索" class="search-input">
-                        <a href="#" class="search-btn">
-                            <i class="fa fa-search"></i>
-                        </a>
-                    </form>
-                </li>
-            </ul> -->
         </nav>
     </div>
 </template>
@@ -278,6 +224,7 @@ nav .user .drop-menu {
   min-width: 160px;
   z-index: 999;
   margin: 0;
+  background-color: #fff
 }
 nav .user .drop-menu li {
   padding: 10px 20px;
@@ -298,7 +245,6 @@ nav .nav-list {
   float: left;
   margin: 0;
   transition: height 0.5s;
-  overflow: hidden;
 }
 nav .nav-list:after {
   content: "";
@@ -417,6 +363,9 @@ nav .nav-mune .ul-mune li {
 }
 @media (min-width: 768px) {
   nav .nav-list {
+    display: block !important;
+  }
+  nav .search{
     display: block !important;
   }
 }
